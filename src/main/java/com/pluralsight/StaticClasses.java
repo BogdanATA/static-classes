@@ -12,5 +12,7 @@ public class StaticClasses {
         String name = NameFormatter.format(prefix, firstName, middleName, lastName, suffix);
 
         System.out.println(name);
+
+        System.out.println(NameFormatter.format(firstName, lastName));
     }
 }
