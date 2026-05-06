@@ -22,11 +22,11 @@ public class NameFormatter {
         formattedName += firstName + " ";
 
         if (!middleName.isBlank()) {
-            formattedName += middleName + ", ";
+            formattedName += middleName;
         }
 
         if (!suffix.isBlank()) {
-            formattedName += suffix;
+            formattedName += ", " + suffix;
         }
 
         return formattedName;
