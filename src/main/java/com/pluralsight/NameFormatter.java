@@ -16,10 +16,10 @@ public class NameFormatter {
         String formattedName = lastName + ", ";
 
         if (!prefix.isBlank()) {
-            formattedName += prefix + " ";
+            formattedName += prefix + ". ";
         }
 
-        formattedName += firstName;
+        formattedName += firstName + " ";
 
         if (!middleName.isBlank()) {
             formattedName += middleName + ", ";
@@ -31,4 +31,6 @@ public class NameFormatter {
 
         return formattedName;
     }
+
+
 }
