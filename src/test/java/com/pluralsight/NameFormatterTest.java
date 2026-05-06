@@ -11,6 +11,8 @@ class NameFormatterTest {
     String lastName = "Johnson";
     String suffix = "PhD";
 
+    String blank = "";
+
     @Test
     public void format_PrintFullName_AllFieldsGiven() {
         // arrange
@@ -21,5 +23,16 @@ class NameFormatterTest {
 
         // assert
         assertEquals("Johnson, Dr. Mel B, PhD", fullName);
+    }
+
+    @Test
+    public void format_PrintOnlyFirstAndLastName_OnlyFirstAndLastNameGiven() {
+        // arrange
+
+        // act
+        String firstLastName = NameFormatter.format(blank, firstName, blank, lastName, blank);
+
+        // assert
+        assertEquals("Johnson, Mel ", firstLastName);
     }
 }
